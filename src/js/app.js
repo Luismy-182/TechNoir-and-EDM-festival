@@ -29,7 +29,10 @@ function crearGaleria(){
     const cantidadImagenes=16;
     for(let i=1; i<=cantidadImagenes; i++){
         const imagen=document.createElement('IMG');
-        imagen.src=`src/img/gallery/full/${i}.jpg`;
+        imagen.width="200"
+        imagen.height="300"
+        imagen.loading='lazy'
+        imagen.src=`src/img/gallery/full/${i}.webp`;
         imagen.alt='Imagen-Galeria';
         //event handler
         imagen.onclick=function(){
@@ -43,7 +46,7 @@ function crearGaleria(){
 function mostrarImagen(i){
 
     const imagen=document.createElement('IMG');
-    imagen.src=`src/img/gallery/full/${i}.jpg`;
+    imagen.src=`src/img/gallery/full/${i}.webp`;
     imagen.alt='Imagen-Galeria';
     //generamos primero el modal
     const modal = document.createElement('DIV');
